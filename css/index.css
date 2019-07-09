@@ -1,0 +1,315 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: '宋体';
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  height: 60px;
+  background-color: #000000;
+  position: relative;
+}
+.header .logo {
+  float: left;
+  width: 200px;
+  height: 36px;
+  background: url(../imgs/logo.png) no-repeat center;
+  background-size: cover;
+  margin: 12px 25px;
+}
+.header .nav {
+  float: left;
+  height: 100%;
+}
+.header .nav__item {
+  display: block;
+  position: relative;
+  float: left;
+  line-height: 60px;
+  color: #fbfbfb;
+  padding: 0 25px;
+  font-size: 14px;
+}
+.header .nav__item:hover {
+  background-color: #363c41;
+}
+.header .nav__item_icon_new {
+  background-color: #363c41;
+}
+.header .nav__item_icon_new:after {
+  content: ' ';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+  background: url(../imgs/icon-new.png);
+}
+.header .search {
+  float: right;
+  padding-right: 25px;
+  position: relative;
+  margin: 12px 25px;
+  height: 36px;
+}
+.header .search__input {
+  width: 242px;
+  border: none;
+  background-color: #000;
+  height: 36px;
+  outline: none;
+  background-color: #000000;
+  border-bottom: 1px solid #5c646b;
+}
+.header .search::before {
+  content: '前端入门';
+  display: block;
+  position: absolute;
+  width: 72px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #2b333b;
+  color: #5c646b;
+  font-size: 12px;
+}
+.header .search__submit {
+  display: block;
+  position: absolute;
+  right: 25px;
+  top: 4px;
+  background-position: 0 0;
+  width: 22px;
+  height: 22px;
+  background-image: url("../imgs/icon-1-sprite_w22.png");
+  background-repeat: no-repeat;
+}
+.header .profile {
+  float: right;
+}
+.header .profile__item {
+  display: block;
+  float: left;
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.header .profile__item:hover {
+  background-color: #363c41;
+}
+.header .profile__shop::before,
+.header .profile__message::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 19px;
+  top: 19px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../imgs/shopcar.png");
+  background-repeat: no-repeat;
+  background-position: 0 -212px;
+}
+.header .profile__message::before {
+  background-image: url("../imgs/icon-1-sprite_w22.png");
+  background-repeat: no-repeat;
+  background-position: 0 -44px;
+}
+.header .profile__ava {
+  width: 36px;
+  height: 36px;
+  margin: 12px;
+  background-color: #363c41;
+  border-radius: 50%;
+  background-image: url("../imgs/ava.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.banner {
+  height: 560px;
+  position: relative;
+  background-image: url("../imgs/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.courses {
+  height: 1000px;
+  position: relative;
+}
+.courses__container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -120px;
+}
+.courses__list {
+  width: 1250px;
+  margin: 0 auto;
+}
+.courses__list .courses {
+  width: 286px;
+  height: 306px;
+  display: inline-block;
+  margin-right: 26px;
+  margin-bottom: 35px;
+  position: relative;
+}
+.courses__list .courses:nth-child(4n) {
+  margin-right: 0;
+}
+.courses__list .courses:last-child {
+  left: 50%;
+  margin-left: -143px;
+  position: relative;
+}
+.courses__list .courses .courses-decoration {
+  width: 286px;
+  height: 306px;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 8px 16px rgba(7, 17, 27, 0.2);
+}
+.courses__list .courses .courses-decoration:before {
+  content: ' ';
+  display: block;
+  width: 98%;
+  left: 1%;
+  bottom: -5px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(7, 17, 27, 0.2);
+  z-index: 9;
+}
+.courses__list .courses .courses-decoration:after {
+  content: ' ';
+  display: block;
+  width: 96%;
+  left: 2%;
+  bottom: -11px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(7, 17, 27, 0.2);
+  z-index: 9;
+}
+.courses__list .courses .courses-item {
+  width: 286px;
+  height: 306px;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  overflow: hidden;
+}
+.courses__list .courses .courses-item__cover {
+  height: 180px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.courses__list .courses .courses-item__cover img {
+  width: 100%;
+}
+.courses__list .courses .courses-item__plan {
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  position: absolute;
+  width: 234px;
+  top: 110px;
+  padding: 25px 26px 0;
+  height: 238px;
+  background-image: url("../imgs/titlebg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.courses__list .courses .courses-item__plan:hover {
+  top: 40px;
+}
+.courses__list .courses .courses-item__plan .caption {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18PX;
+}
+.courses__list .courses .courses-item__plan .courses-item__times {
+  border-bottom: 1px solid #CCC;
+  color: #5c646b;
+  font-size: 12px;
+  line-height: 30px;
+  width: 234px;
+  position: absolute;
+  top: 84px;
+}
+.courses__list .courses .courses-item__plan .intro {
+  position: absolute;
+  bottom: 80px;
+  padding-right: 25px;
+}
+.courses__list .courses .courses-item__price {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+  line-height: 60px;
+  padding-left: 20px;
+  background-color: #fff;
+  color: red;
+}
+.footer {
+  height: 98px;
+  background-color: #000000;
+  position: relative;
+  font-size: 12px;
+}
+.footer__container {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.footer__container .footer-link {
+  height: 12px;
+  padding: 30px 0 16px 40px;
+}
+.footer__container .footer-link__item {
+  display: inline-block;
+  margin-right: 30px;
+  float: left;
+  color: #959aa0;
+}
+.footer__container .footer-copy {
+  height: 12px;
+  padding: 0 0 0 40px;
+  color: #959aa0;
+}
+.footer__container .footer-share {
+  width: 150px;
+  height: 32px;
+  display: inline-block;
+  position: absolute;
+  right: 40px;
+  top: 34px;
+}
+.footer__container .footer-share__item {
+  color: #787d82;
+  padding-left: 13px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../imgs/footer-sprite.png");
+  background-repeat: no-repeat;
+  opacity: .5;
+  background-position: 0 -279px;
+}
+.footer__container .footer-share__item:nth-child(2) {
+  background-position: 0 -321px;
+}
+.footer__container .footer-share__item:nth-child(3) {
+  background-position: 0 -363px;
+}
